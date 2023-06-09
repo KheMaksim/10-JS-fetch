@@ -1,0 +1,90 @@
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+li
+	list-style-type: none
+
+a
+	text-decoration: none
+
+=square($size)
+	width: $size
+	height: $size
+
+.main__container
+	width: 1250px
+	margin: 0 auto
+
+.container
+	width: inherit
+	display: flex
+	padding: 15px
+
+.pokemon
+	&__title
+		padding: 25px
+		font-size: 40px
+	&__container
+		+square(600px)
+		position: relative
+		margin-right: 50px
+	&__circle
+		background: linear-gradient(to bottom, rgb(255,255,255) 48%,rgb(0,0,0) 50%,rgb(255,0,0) 52%)
+		opacity: 60%
+		+square(600px)
+		border-radius: 50%
+		border: 1px solid black
+		box-shadow: 0 0 10px 5px #000
+		padding: 15px
+		position: absolute
+		z-index: -1
+	&__mini-circle
+		background: #fff
+		+square(100px)
+		border-radius: 50%
+		border: 5px solid black
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		position: absolute
+		z-index: inherit
+	&__list
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translate(-145px, 39px)
+	&__link
+		display: block
+		font-size: 21px
+	&__pagination
+		width: 100px
+		height: 50px
+		position: absolute
+		transform: translate(-15px, -100%)
+		top: 50%
+		right: 0
+		background: red
+		border-radius: 50px 50px 0 0
+		&:last-child
+			background: white
+			border-radius: 0 0 50px 50px
+			transform: translate(-15px, 0%)
+	&__result
+		display: none
+		flex-direction: column
+		align-items: center
+		position: relative
+		width: 50%
+		right: 0
+		gap: 60px
+	&__image
+		padding-top: 50px
+	&__pic
+		width: 250px
+		height: 250px
+	&__info
+		font-size: 24px
+	&__stat
+		padding: 10px
